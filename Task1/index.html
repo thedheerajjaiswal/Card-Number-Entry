@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <span>
+            <p class="title">Card Number : </p>
+        </span>
+        <span>
+            <form class="inputForm" id="form">
+                <input type="text" class="card-inp" maxlength="16" name="card-num" onkeyup="switchElement1()" id="1"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <input type=" text" class="card-inp" maxlength="4" name="card-num" onkeyup="switchElement2()" id="2"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <input type="text" class="card-inp" maxlength="4" name="card-num" onkeyup="switchElement3()" id="3"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                <input type="text" class="card-inp" maxlength="4" name="card-num" onkeyup="switchElement4()" id="4"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+            </form>
+        </span>
+        <input type="button" class="btn" onclick="submitOnClick()" name="submit" value="Submit">
+        <!-- <button class="btn" onclick="submitOnClick()">Submit</button> -->
+    </div>
+    <ul class="list center" id="list">
+
+    </ul>
+    <script src="app.js" class="btn" type="text/javascript"> </script>
+</body>
+
+</html>
